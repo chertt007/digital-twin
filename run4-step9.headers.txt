@@ -1,0 +1,18 @@
+HTTP/1.1 404 Not Found
+Date: Tue, 24 Mar 2026 14:00:42 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 9
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With, Sec-Fetch-Site,Accept-Encoding, Accept, X-Requested-With
+Cache-Control: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'self'; img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline'
+Server: github.com
+Set-Cookie: _gh_sess=NOckNFd5w54TwUobW51lmmVeuX0GZ1z80OuWuDSM9XCE%2BKDZrE17EMcuBnhC4MNsRGfB7Ybj%2BX7kAkdk9MNeLVjkncNs2UI9THMjXaoLnVESvBDh5QQQOOXDckWKW7J47KoEDlzvUrd%2BPSbBG52Jpl7roXt5hil8SXFDpLCdUlGEkM75SkPcYFh3s6OIrAunflYsCGCG1gJPDvCRSkb5Gg%2FjEfqzbJLGaVS%2BVtyxL75KuSL45X9iZjhPIjljvGWq5YQZTEnHOXRQxsnGbMq15w%3D%3D--AJXX%2FrGuLcmVO3ld--m8dTjg4MwyvtYCy3yRQcNQ%3D%3D; path=/; HttpOnly; secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1633271050.1774360842; expires=Wed, 24 Mar 2027 14:00:42 GMT; domain=.github.com; path=/; secure; SameSite=Lax
+Set-Cookie: logged_in=no; expires=Wed, 24 Mar 2027 14:00:42 GMT; domain=.github.com; path=/; HttpOnly; secure; SameSite=Lax
+X-GitHub-Request-Id: FFAC:7CE22:10E6FD2:1D2B819:69C2990A
+

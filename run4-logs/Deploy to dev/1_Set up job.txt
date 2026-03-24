@@ -1,0 +1,34 @@
+﻿2026-03-24T13:55:53.2526526Z Current runner version: '2.332.0'
+2026-03-24T13:55:53.2552992Z ##[group]Runner Image Provisioner
+2026-03-24T13:55:53.2553922Z Hosted Compute Agent
+2026-03-24T13:55:53.2554760Z Version: 20260213.493
+2026-03-24T13:55:53.2555416Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-24T13:55:53.2556135Z Build Date: 2026-02-13T00:28:41Z
+2026-03-24T13:55:53.2556882Z Worker ID: {854ddb3a-fb52-445e-a783-f79d836b5d9a}
+2026-03-24T13:55:53.2557584Z Azure Region: eastus
+2026-03-24T13:55:53.2558122Z ##[endgroup]
+2026-03-24T13:55:53.2559947Z ##[group]Operating System
+2026-03-24T13:55:53.2560576Z Ubuntu
+2026-03-24T13:55:53.2561133Z 24.04.3
+2026-03-24T13:55:53.2561732Z LTS
+2026-03-24T13:55:53.2562275Z ##[endgroup]
+2026-03-24T13:55:53.2562848Z ##[group]Runner Image
+2026-03-24T13:55:53.2563450Z Image: ubuntu-24.04
+2026-03-24T13:55:53.2564037Z Version: 20260309.50.1
+2026-03-24T13:55:53.2565491Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260309.50/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-24T13:55:53.2567201Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260309.50
+2026-03-24T13:55:53.2569123Z ##[endgroup]
+2026-03-24T13:55:53.2570237Z ##[group]GITHUB_TOKEN Permissions
+2026-03-24T13:55:53.2572394Z Contents: read
+2026-03-24T13:55:53.2573072Z Metadata: read
+2026-03-24T13:55:53.2573647Z ##[endgroup]
+2026-03-24T13:55:53.2576196Z Secret source: Actions
+2026-03-24T13:55:53.2577028Z Prepare workflow directory
+2026-03-24T13:55:53.3097316Z Prepare all required actions
+2026-03-24T13:55:53.3135293Z Getting action download info
+2026-03-24T13:55:53.6849238Z Download action repository 'actions/checkout@v5' (SHA:93cb6efe18208431cddfb8368fd83d5badbf9bfd)
+2026-03-24T13:55:53.8292182Z Download action repository 'aws-actions/configure-aws-credentials@v5' (SHA:61815dcd50bd041e203e49132bacad1fd04d2708)
+2026-03-24T13:55:54.0815220Z Download action repository 'actions/setup-python@v6' (SHA:a309ff8b426b58ec0e2a45f0f869d46889d02405)
+2026-03-24T13:55:54.1623659Z Download action repository 'hashicorp/setup-terraform@v4' (SHA:5e8dbf3c6d9deaf4193ca7a8fb23f2ac83bb6c85)
+2026-03-24T13:55:54.3660740Z Download action repository 'actions/setup-node@v5' (SHA:a0853c24544627f65ddf259abe73b1d18a591444)
+2026-03-24T13:55:54.6627914Z Complete job name: Deploy to dev

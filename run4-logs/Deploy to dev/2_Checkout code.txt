@@ -1,0 +1,74 @@
+﻿2026-03-24T13:55:54.7449784Z ##[group]Run actions/checkout@v5
+2026-03-24T13:55:54.7451105Z with:
+2026-03-24T13:55:54.7451897Z   repository: chertt007/digital-twin
+2026-03-24T13:55:54.7453175Z   token: ***
+2026-03-24T13:55:54.7453939Z   ssh-strict: true
+2026-03-24T13:55:54.7454900Z   ssh-user: git
+2026-03-24T13:55:54.7455719Z   persist-credentials: true
+2026-03-24T13:55:54.7456632Z   clean: true
+2026-03-24T13:55:54.7457441Z   sparse-checkout-cone-mode: true
+2026-03-24T13:55:54.7458444Z   fetch-depth: 1
+2026-03-24T13:55:54.7459247Z   fetch-tags: false
+2026-03-24T13:55:54.7460059Z   show-progress: true
+2026-03-24T13:55:54.7460887Z   lfs: false
+2026-03-24T13:55:54.7461637Z   submodules: false
+2026-03-24T13:55:54.7462453Z   set-safe-directory: true
+2026-03-24T13:55:54.7463592Z env:
+2026-03-24T13:55:54.7464704Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:55:54.7465691Z ##[endgroup]
+2026-03-24T13:55:54.8438533Z Syncing repository: chertt007/digital-twin
+2026-03-24T13:55:54.8441305Z ##[group]Getting Git version info
+2026-03-24T13:55:54.8442743Z Working directory is '/home/runner/work/digital-twin/digital-twin'
+2026-03-24T13:55:54.8445138Z [command]/usr/bin/git version
+2026-03-24T13:55:54.8497238Z git version 2.53.0
+2026-03-24T13:55:54.8519036Z ##[endgroup]
+2026-03-24T13:55:54.8533735Z Temporarily overriding HOME='/home/runner/work/_temp/fc7a4915-e3f4-45c7-9bd5-fbe416f4c8d1' before making global git config changes
+2026-03-24T13:55:54.8537605Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-24T13:55:54.8541397Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/digital-twin/digital-twin
+2026-03-24T13:55:54.8581088Z Deleting the contents of '/home/runner/work/digital-twin/digital-twin'
+2026-03-24T13:55:54.8585628Z ##[group]Initializing the repository
+2026-03-24T13:55:54.8589984Z [command]/usr/bin/git init /home/runner/work/digital-twin/digital-twin
+2026-03-24T13:55:54.8705468Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-24T13:55:54.8709210Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-24T13:55:54.8712751Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-24T13:55:54.8716057Z hint: call:
+2026-03-24T13:55:54.8716977Z hint:
+2026-03-24T13:55:54.8718020Z hint: 	git config --global init.defaultBranch <name>
+2026-03-24T13:55:54.8719747Z hint:
+2026-03-24T13:55:54.8721096Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-24T13:55:54.8722895Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-24T13:55:54.8724283Z hint:
+2026-03-24T13:55:54.8725308Z hint: 	git branch -m <name>
+2026-03-24T13:55:54.8726184Z hint:
+2026-03-24T13:55:54.8727581Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-24T13:55:54.8729646Z Initialized empty Git repository in /home/runner/work/digital-twin/digital-twin/.git/
+2026-03-24T13:55:54.8732765Z [command]/usr/bin/git remote add origin https://github.com/chertt007/digital-twin
+2026-03-24T13:55:54.8794591Z ##[endgroup]
+2026-03-24T13:55:54.8796233Z ##[group]Disabling automatic garbage collection
+2026-03-24T13:55:54.8798006Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-24T13:55:54.8829530Z ##[endgroup]
+2026-03-24T13:55:54.8830857Z ##[group]Setting up auth
+2026-03-24T13:55:54.8836645Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-24T13:55:54.8869095Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-24T13:55:54.9211167Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-24T13:55:54.9247494Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-24T13:55:54.9483834Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-24T13:55:54.9517157Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-24T13:55:54.9753938Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-24T13:55:54.9790975Z ##[endgroup]
+2026-03-24T13:55:54.9792406Z ##[group]Fetching the repository
+2026-03-24T13:55:54.9800321Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +742e8a3dd4dbc0ced78dfe949eef5a62e416ddf5:refs/remotes/origin/main
+2026-03-24T13:55:55.2160976Z From https://github.com/chertt007/digital-twin
+2026-03-24T13:55:55.2164841Z  * [new ref]         742e8a3dd4dbc0ced78dfe949eef5a62e416ddf5 -> origin/main
+2026-03-24T13:55:55.2197909Z ##[endgroup]
+2026-03-24T13:55:55.2200241Z ##[group]Determining the checkout info
+2026-03-24T13:55:55.2203107Z ##[endgroup]
+2026-03-24T13:55:55.2205581Z [command]/usr/bin/git sparse-checkout disable
+2026-03-24T13:55:55.2252933Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-24T13:55:55.2284289Z ##[group]Checking out the ref
+2026-03-24T13:55:55.2288232Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-24T13:55:55.2395184Z Switched to a new branch 'main'
+2026-03-24T13:55:55.2398390Z branch 'main' set up to track 'origin/main'.
+2026-03-24T13:55:55.2406495Z ##[endgroup]
+2026-03-24T13:55:55.2443736Z [command]/usr/bin/git log -1 --format=%H
+2026-03-24T13:55:55.2473043Z 742e8a3dd4dbc0ced78dfe949eef5a62e416ddf5

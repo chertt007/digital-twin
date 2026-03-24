@@ -1,0 +1,34 @@
+﻿2026-03-24T13:56:03.1502670Z ##[group]Run actions/setup-node@v5
+2026-03-24T13:56:03.1502970Z with:
+2026-03-24T13:56:03.1503167Z   node-version: 20
+2026-03-24T13:56:03.1503375Z   cache: npm
+2026-03-24T13:56:03.1503628Z   cache-dependency-path: frontend/package-lock.json
+2026-03-24T13:56:03.1503945Z   always-auth: false
+2026-03-24T13:56:03.1504163Z   check-latest: false
+2026-03-24T13:56:03.1504667Z   token: ***
+2026-03-24T13:56:03.1504886Z   package-manager-cache: true
+2026-03-24T13:56:03.1505133Z env:
+2026-03-24T13:56:03.1505359Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:03.1505606Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:03.1505849Z   AWS_REGION: ***
+2026-03-24T13:56:03.1506079Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:03.1506415Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:03.1511123Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:03.1511429Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.1511859Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-03-24T13:56:03.1512280Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.1512692Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.1513066Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.1513453Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-03-24T13:56:03.1513785Z ##[endgroup]
+2026-03-24T13:56:03.2961956Z Found in cache @ /opt/hostedtoolcache/node/20.20.1/x64
+2026-03-24T13:56:03.2967187Z (node:2460) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-03-24T13:56:03.2968311Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-24T13:56:03.2969913Z ##[group]Environment details
+2026-03-24T13:56:03.6425023Z node: v20.20.1
+2026-03-24T13:56:03.6425851Z npm: 10.8.2
+2026-03-24T13:56:03.6426208Z yarn: 1.22.22
+2026-03-24T13:56:03.6427001Z ##[endgroup]
+2026-03-24T13:56:03.6453206Z [command]/opt/hostedtoolcache/node/20.20.1/x64/bin/npm config get cache
+2026-03-24T13:56:03.7602807Z /home/runner/.npm
+2026-03-24T13:56:03.8729991Z npm cache is not found

@@ -1,0 +1,23 @@
+﻿2026-03-24T13:56:00.9849822Z ##[group]Run curl -LsSf https://astral.sh/uv/install.sh | sh
+2026-03-24T13:56:00.9850367Z [36;1mcurl -LsSf https://astral.sh/uv/install.sh | sh[0m
+2026-03-24T13:56:00.9850754Z [36;1mecho "$HOME/.local/bin" >> $GITHUB_PATH[0m
+2026-03-24T13:56:01.1467047Z shell: /usr/bin/bash -e {0}
+2026-03-24T13:56:01.1467511Z env:
+2026-03-24T13:56:01.1467991Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:01.1468479Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:01.1468950Z   AWS_REGION: ***
+2026-03-24T13:56:01.1469422Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:01.1470017Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:01.1480053Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:01.1480673Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:01.1481491Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-03-24T13:56:01.1482290Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:01.1482975Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:01.1483725Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:01.1484675Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-03-24T13:56:01.1485282Z ##[endgroup]
+2026-03-24T13:56:01.2930408Z downloading uv 0.11.0 x86_64-unknown-linux-gnu
+2026-03-24T13:56:02.0169615Z installing to /home/runner/.local/bin
+2026-03-24T13:56:02.0242280Z   uv
+2026-03-24T13:56:02.0267043Z   uvx
+2026-03-24T13:56:02.0310570Z everything's installed!

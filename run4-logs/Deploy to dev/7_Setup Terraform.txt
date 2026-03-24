@@ -1,0 +1,22 @@
+﻿2026-03-24T13:56:02.0451747Z ##[group]Run hashicorp/setup-terraform@v4
+2026-03-24T13:56:02.0452492Z with:
+2026-03-24T13:56:02.0452826Z   terraform_wrapper: false
+2026-03-24T13:56:02.0453295Z   cli_config_credentials_hostname: app.terraform.io
+2026-03-24T13:56:02.0453826Z   terraform_version: latest
+2026-03-24T13:56:02.0454196Z env:
+2026-03-24T13:56:02.0455289Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:02.0455720Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:02.0456117Z   AWS_REGION: ***
+2026-03-24T13:56:02.0456522Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:02.0456858Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:02.0465525Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:02.0466042Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:02.0466769Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-03-24T13:56:02.0467348Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:02.0467742Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:02.0468582Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:02.0469295Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-03-24T13:56:02.0469838Z ##[endgroup]
+2026-03-24T13:56:02.1889364Z (node:2447) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-03-24T13:56:02.1891291Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-24T13:56:02.4418854Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/009cdcbe-0971-4484-b611-a2cdc5f42925

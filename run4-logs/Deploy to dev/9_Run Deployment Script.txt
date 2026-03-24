@@ -1,0 +1,199 @@
+﻿2026-03-24T13:56:03.8859781Z ##[group]Run # Set environment variables for the script
+2026-03-24T13:56:03.8860220Z [36;1m# Set environment variables for the script[0m
+2026-03-24T13:56:03.8860590Z [36;1mexport AWS_ACCOUNT_ID=***[0m
+2026-03-24T13:56:03.8861103Z [36;1mexport DEFAULT_AWS_REGION=***[0m
+2026-03-24T13:56:03.8861377Z [36;1m[0m
+2026-03-24T13:56:03.8861607Z [36;1m# Make script executable and run it[0m
+2026-03-24T13:56:03.8861904Z [36;1mchmod +x scripts/deploy.sh[0m
+2026-03-24T13:56:03.8862174Z [36;1m./scripts/deploy.sh dev[0m
+2026-03-24T13:56:03.8918440Z shell: /usr/bin/bash -e {0}
+2026-03-24T13:56:03.8918710Z env:
+2026-03-24T13:56:03.8918954Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:03.8919234Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:03.8919495Z   AWS_REGION: ***
+2026-03-24T13:56:03.8919741Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:03.8920091Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:03.8925637Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:03.8925969Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.8926472Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-03-24T13:56:03.8926920Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.8927349Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.8927751Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.8928153Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-03-24T13:56:03.8928631Z   AWS_ROLE_ARN: ***
+2026-03-24T13:56:03.8928846Z ##[endgroup]
+2026-03-24T13:56:03.9035955Z Using GitHub OIDC credentials
+2026-03-24T13:56:03.9036893Z 🚀 Deploying twin to dev...
+2026-03-24T13:56:03.9043661Z 📦 Building Lambda package...
+2026-03-24T13:56:04.4436942Z Using CPython 3.12.13 interpreter at: /opt/hostedtoolcache/Python/3.12.13/x64/bin/python3.12
+2026-03-24T13:56:04.4438367Z Creating virtual environment at: .venv
+2026-03-24T13:56:04.5397603Z Downloading pydantic-core (2.0MiB)
+2026-03-24T13:56:04.5406662Z Downloading openai (1.1MiB)
+2026-03-24T13:56:04.5413146Z Downloading botocore (14.0MiB)
+2026-03-24T13:56:04.6133597Z  Downloaded pydantic-core
+2026-03-24T13:56:04.8377396Z  Downloaded openai
+2026-03-24T13:56:05.0019497Z  Downloaded botocore
+2026-03-24T13:56:05.1032300Z Installed 32 packages in 100ms
+2026-03-24T13:56:05.3265262Z Unable to find image 'public.ecr.aws/lambda/python:3.12' locally
+2026-03-24T13:56:05.5960030Z 3.12: Pulling from lambda/python
+2026-03-24T13:56:05.6429304Z bf639fcde966: Pulling fs layer
+2026-03-24T13:56:05.6430120Z dc6162246921: Pulling fs layer
+2026-03-24T13:56:05.6430834Z 350721d34ec8: Pulling fs layer
+2026-03-24T13:56:05.6431602Z 4e59a93cc0d9: Pulling fs layer
+2026-03-24T13:56:05.6432265Z 85f148e76baa: Pulling fs layer
+2026-03-24T13:56:05.6432921Z b448e16026b2: Pulling fs layer
+2026-03-24T13:56:05.6433506Z 4e59a93cc0d9: Waiting
+2026-03-24T13:56:05.6433910Z 85f148e76baa: Waiting
+2026-03-24T13:56:05.6434236Z b448e16026b2: Waiting
+2026-03-24T13:56:05.7447220Z 350721d34ec8: Verifying Checksum
+2026-03-24T13:56:05.7448612Z 350721d34ec8: Download complete
+2026-03-24T13:56:05.7460541Z dc6162246921: Verifying Checksum
+2026-03-24T13:56:05.7461517Z dc6162246921: Download complete
+2026-03-24T13:56:05.8091674Z 4e59a93cc0d9: Verifying Checksum
+2026-03-24T13:56:05.8092517Z 4e59a93cc0d9: Download complete
+2026-03-24T13:56:05.8544730Z b448e16026b2: Download complete
+2026-03-24T13:56:05.8786653Z bf639fcde966: Verifying Checksum
+2026-03-24T13:56:05.8787431Z bf639fcde966: Download complete
+2026-03-24T13:56:06.2987250Z 85f148e76baa: Verifying Checksum
+2026-03-24T13:56:06.2988394Z 85f148e76baa: Download complete
+2026-03-24T13:56:07.4010260Z bf639fcde966: Pull complete
+2026-03-24T13:56:08.4472359Z dc6162246921: Pull complete
+2026-03-24T13:56:08.4582320Z 350721d34ec8: Pull complete
+2026-03-24T13:56:08.5203903Z 4e59a93cc0d9: Pull complete
+2026-03-24T13:56:14.0290477Z 85f148e76baa: Pull complete
+2026-03-24T13:56:14.0409536Z b448e16026b2: Pull complete
+2026-03-24T13:56:14.0455050Z Digest: sha256:655d3d70a185e87e2b86f61bde3609165b198cd7bcf64191ca77743db61c6378
+2026-03-24T13:56:14.0469933Z Status: Downloaded newer image for public.ecr.aws/lambda/python:3.12
+2026-03-24T13:56:14.5831306Z Collecting fastapi (from -r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:14.6072627Z   Downloading fastapi-0.135.2-py3-none-any.whl.metadata (28 kB)
+2026-03-24T13:56:14.6338330Z Collecting uvicorn (from -r /var/task/requirements.txt (line 2))
+2026-03-24T13:56:14.6373787Z   Downloading uvicorn-0.42.0-py3-none-any.whl.metadata (6.7 kB)
+2026-03-24T13:56:14.6532889Z Collecting python-dotenv (from -r /var/task/requirements.txt (line 3))
+2026-03-24T13:56:14.6565202Z   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+2026-03-24T13:56:14.6694933Z Collecting python-multipart (from -r /var/task/requirements.txt (line 4))
+2026-03-24T13:56:14.6728469Z   Downloading python_multipart-0.0.22-py3-none-any.whl.metadata (1.8 kB)
+2026-03-24T13:56:14.8756354Z Collecting boto3 (from -r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:14.8791335Z   Downloading boto3-1.42.74-py3-none-any.whl.metadata (6.7 kB)
+2026-03-24T13:56:14.8976855Z Collecting pypdf (from -r /var/task/requirements.txt (line 6))
+2026-03-24T13:56:14.9011477Z   Downloading pypdf-6.9.2-py3-none-any.whl.metadata (7.1 kB)
+2026-03-24T13:56:14.9156617Z Collecting mangum (from -r /var/task/requirements.txt (line 7))
+2026-03-24T13:56:14.9190057Z   Downloading mangum-0.21.0-py3-none-any.whl.metadata (3.5 kB)
+2026-03-24T13:56:14.9398086Z Collecting starlette>=0.46.0 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:14.9429728Z   Downloading starlette-1.0.0-py3-none-any.whl.metadata (6.3 kB)
+2026-03-24T13:56:15.0298640Z Collecting pydantic>=2.9.0 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.0333463Z   Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+2026-03-24T13:56:15.0527703Z Collecting typing-extensions>=4.8.0 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.0563229Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-24T13:56:15.0664141Z Collecting typing-inspection>=0.4.2 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.0696640Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-03-24T13:56:15.0798514Z Collecting annotated-doc>=0.0.2 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.0830881Z   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+2026-03-24T13:56:15.0995230Z Collecting click>=7.0 (from uvicorn->-r /var/task/requirements.txt (line 2))
+2026-03-24T13:56:15.1032819Z   Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-03-24T13:56:15.1141027Z Collecting h11>=0.8 (from uvicorn->-r /var/task/requirements.txt (line 2))
+2026-03-24T13:56:15.1174811Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-03-24T13:56:15.3532054Z Collecting botocore<1.43.0,>=1.42.74 (from boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.3566913Z   Downloading botocore-1.42.74-py3-none-any.whl.metadata (5.9 kB)
+2026-03-24T13:56:15.3691719Z Collecting jmespath<2.0.0,>=0.7.1 (from boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.3726096Z   Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+2026-03-24T13:56:15.3884528Z Collecting s3transfer<0.17.0,>=0.16.0 (from boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.3915975Z   Downloading s3transfer-0.16.0-py3-none-any.whl.metadata (1.7 kB)
+2026-03-24T13:56:15.4076345Z Collecting python-dateutil<3.0.0,>=2.1 (from botocore<1.43.0,>=1.42.74->boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.4107546Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-03-24T13:56:15.4324872Z Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.43.0,>=1.42.74->boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.4358206Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-03-24T13:56:15.4496417Z Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.4527449Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-03-24T13:56:15.9454301Z Collecting pydantic-core==2.41.5 (from pydantic>=2.9.0->fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.9495550Z   Downloading pydantic_core-2.41.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+2026-03-24T13:56:16.0741606Z Collecting anyio<5,>=3.6.2 (from starlette>=0.46.0->fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:16.0774947Z   Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+2026-03-24T13:56:16.0965248Z Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette>=0.46.0->fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:16.0999907Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-03-24T13:56:16.1149384Z Collecting six>=1.5 (from python-dateutil<3.0.0,>=2.1->botocore<1.43.0,>=1.42.74->boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:16.1183080Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-03-24T13:56:16.1285905Z Downloading fastapi-0.135.2-py3-none-any.whl (117 kB)
+2026-03-24T13:56:16.1344039Z Downloading uvicorn-0.42.0-py3-none-any.whl (68 kB)
+2026-03-24T13:56:16.1398436Z Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-03-24T13:56:16.1452720Z Downloading python_multipart-0.0.22-py3-none-any.whl (24 kB)
+2026-03-24T13:56:16.1504908Z Downloading boto3-1.42.74-py3-none-any.whl (140 kB)
+2026-03-24T13:56:16.1559438Z Downloading pypdf-6.9.2-py3-none-any.whl (333 kB)
+2026-03-24T13:56:16.1705824Z Downloading mangum-0.21.0-py3-none-any.whl (17 kB)
+2026-03-24T13:56:16.1756467Z Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+2026-03-24T13:56:16.1809925Z Downloading botocore-1.42.74-py3-none-any.whl (14.7 MB)
+2026-03-24T13:56:16.2403177Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 257.4 MB/s eta 0:00:00
+2026-03-24T13:56:16.2442328Z Downloading click-8.3.1-py3-none-any.whl (108 kB)
+2026-03-24T13:56:16.2498118Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-03-24T13:56:16.2550977Z Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+2026-03-24T13:56:16.2600601Z Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+2026-03-24T13:56:16.2671220Z Downloading pydantic_core-2.41.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-03-24T13:56:16.2793012Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 196.5 MB/s eta 0:00:00
+2026-03-24T13:56:16.2825143Z Downloading s3transfer-0.16.0-py3-none-any.whl (86 kB)
+2026-03-24T13:56:16.2879425Z Downloading starlette-1.0.0-py3-none-any.whl (72 kB)
+2026-03-24T13:56:16.2933368Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-03-24T13:56:16.2986742Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-03-24T13:56:16.3041173Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-03-24T13:56:16.3092019Z Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+2026-03-24T13:56:16.3150009Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-03-24T13:56:16.3210021Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-03-24T13:56:16.3265202Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+2026-03-24T13:56:16.3318892Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-03-24T13:56:16.4178162Z Installing collected packages: urllib3, typing-extensions, six, python-multipart, python-dotenv, pypdf, jmespath, idna, h11, click, annotated-types, annotated-doc, uvicorn, typing-inspection, python-dateutil, pydantic-core, mangum, anyio, starlette, pydantic, botocore, s3transfer, fastapi, boto3
+2026-03-24T13:56:18.2350073Z Successfully installed annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.13.0 boto3-1.42.74 botocore-1.42.74 click-8.3.1 fastapi-0.135.2 h11-0.16.0 idna-3.11 jmespath-1.1.0 mangum-0.21.0 pydantic-2.12.5 pydantic-core-2.41.5 pypdf-6.9.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.22 s3transfer-0.16.0 six-1.17.0 starlette-1.0.0 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.6.3 uvicorn-0.42.0
+2026-03-24T13:56:18.8903275Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-03-24T13:56:18.9510812Z 
+2026-03-24T13:56:18.9511663Z [notice] A new release of pip is available: 25.0.1 -> 26.0.1
+2026-03-24T13:56:18.9512510Z [notice] To update, run: pip install --upgrade pip
+2026-03-24T13:56:20.7179008Z Creating Lambda deployment package...
+2026-03-24T13:56:20.7179728Z Installing dependencies for Lambda runtime...
+2026-03-24T13:56:20.7180294Z Copying application files...
+2026-03-24T13:56:20.7180706Z Creating zip file...
+2026-03-24T13:56:20.7181173Z Created lambda-deployment.zip (21.99 MB)
+2026-03-24T13:56:21.9174550Z [0m[1mInitializing the backend...[0m
+2026-03-24T13:56:23.1245545Z [0m[32m
+2026-03-24T13:56:23.1246729Z Successfully configured the backend "s3"! Terraform will automatically
+2026-03-24T13:56:23.1248143Z use this backend unless the backend configuration changes.[0m
+2026-03-24T13:56:23.7783789Z [0m[1mInitializing provider plugins...[0m
+2026-03-24T13:56:23.7784858Z - Finding hashicorp/aws versions matching "~> 6.0"...
+2026-03-24T13:56:23.9101385Z - Installing hashicorp/aws v6.37.0...
+2026-03-24T13:56:28.4832156Z - Installed hashicorp/aws v6.37.0 (signed by HashiCorp)
+2026-03-24T13:56:28.4834726Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-03-24T13:56:28.4835762Z selections it made above. Include this file in your version control repository
+2026-03-24T13:56:28.4836555Z so that Terraform can guarantee to make the same selections by default when
+2026-03-24T13:56:28.4837235Z you run "terraform init" in the future.[0m
+2026-03-24T13:56:28.4837518Z 
+2026-03-24T13:56:28.4837928Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-03-24T13:56:28.4838416Z [0m[32m
+2026-03-24T13:56:28.4838949Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-03-24T13:56:28.4839724Z any changes that are required for your infrastructure. All Terraform commands
+2026-03-24T13:56:28.4840233Z should now work.
+2026-03-24T13:56:28.4840396Z 
+2026-03-24T13:56:28.4840751Z If you ever set or change modules or backend configuration for Terraform,
+2026-03-24T13:56:28.4841390Z rerun this command to reinitialize your working directory. If you forget, other
+2026-03-24T13:56:28.4842025Z commands will detect it and remind you to do so if necessary.[0m
+2026-03-24T13:56:31.8098920Z [0m[32mSwitched to workspace "dev".[0m
+2026-03-24T13:56:31.8123222Z 🎯 Applying Terraform...
+2026-03-24T13:56:33.7689937Z Acquiring state lock. This may take a few moments...
+2026-03-24T13:56:38.5821070Z 
+2026-03-24T13:56:38.5821795Z Changes to Outputs:
+2026-03-24T13:56:38.5822739Z   [32m+[0m[0m custom_domain_url = ""
+2026-03-24T13:56:38.5823098Z 
+2026-03-24T13:56:38.5823751Z You can apply this plan to save these new output values to the Terraform
+2026-03-24T13:56:38.5824948Z state, without changing any real infrastructure.
+2026-03-24T13:56:38.5826194Z [31m╷[0m[0m
+2026-03-24T13:56:38.5827448Z [31m│[0m [0m[1m[31mError: [0m[0m[1mfailed to get shared config profile, root[0m
+2026-03-24T13:56:38.5828316Z [31m│[0m [0m
+2026-03-24T13:56:38.5829236Z [31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/aws"],
+2026-03-24T13:56:38.5830536Z [31m│[0m [0m  on versions.tf line 12, in provider "aws":
+2026-03-24T13:56:38.5831499Z [31m│[0m [0m  12: provider "aws" [4m{[0m[0m
+2026-03-24T13:56:38.5831963Z [31m│[0m [0m
+2026-03-24T13:56:38.5832294Z [31m╵[0m[0m
+2026-03-24T13:56:38.5832847Z [31m╷[0m[0m
+2026-03-24T13:56:38.5833543Z [31m│[0m [0m[1m[31mError: [0m[0m[1mfailed to get shared config profile, root[0m
+2026-03-24T13:56:38.5835016Z [31m│[0m [0m
+2026-03-24T13:56:38.5835745Z [31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/aws"].us_east_1,
+2026-03-24T13:56:38.5836772Z [31m│[0m [0m  on versions.tf line 16, in provider "aws":
+2026-03-24T13:56:38.5837402Z [31m│[0m [0m  16: provider "aws" [4m{[0m[0m
+2026-03-24T13:56:38.5837835Z [31m│[0m [0m
+2026-03-24T13:56:38.5838138Z [31m╵[0m[0m
+2026-03-24T13:56:38.8181370Z ##[error]Process completed with exit code 1.

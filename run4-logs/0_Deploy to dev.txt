@@ -1,0 +1,450 @@
+﻿2026-03-24T13:55:53.2527714Z Current runner version: '2.332.0'
+2026-03-24T13:55:53.2553020Z ##[group]Runner Image Provisioner
+2026-03-24T13:55:53.2553926Z Hosted Compute Agent
+2026-03-24T13:55:53.2554765Z Version: 20260213.493
+2026-03-24T13:55:53.2555420Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-24T13:55:53.2556163Z Build Date: 2026-02-13T00:28:41Z
+2026-03-24T13:55:53.2556886Z Worker ID: {854ddb3a-fb52-445e-a783-f79d836b5d9a}
+2026-03-24T13:55:53.2557587Z Azure Region: eastus
+2026-03-24T13:55:53.2558125Z ##[endgroup]
+2026-03-24T13:55:53.2559966Z ##[group]Operating System
+2026-03-24T13:55:53.2560580Z Ubuntu
+2026-03-24T13:55:53.2561136Z 24.04.3
+2026-03-24T13:55:53.2561736Z LTS
+2026-03-24T13:55:53.2562278Z ##[endgroup]
+2026-03-24T13:55:53.2562852Z ##[group]Runner Image
+2026-03-24T13:55:53.2563453Z Image: ubuntu-24.04
+2026-03-24T13:55:53.2564041Z Version: 20260309.50.1
+2026-03-24T13:55:53.2565654Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260309.50/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-24T13:55:53.2567972Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260309.50
+2026-03-24T13:55:53.2569127Z ##[endgroup]
+2026-03-24T13:55:53.2570241Z ##[group]GITHUB_TOKEN Permissions
+2026-03-24T13:55:53.2572415Z Contents: read
+2026-03-24T13:55:53.2573075Z Metadata: read
+2026-03-24T13:55:53.2573651Z ##[endgroup]
+2026-03-24T13:55:53.2576217Z Secret source: Actions
+2026-03-24T13:55:53.2577033Z Prepare workflow directory
+2026-03-24T13:55:53.3097391Z Prepare all required actions
+2026-03-24T13:55:53.3135322Z Getting action download info
+2026-03-24T13:55:53.6849279Z Download action repository 'actions/checkout@v5' (SHA:93cb6efe18208431cddfb8368fd83d5badbf9bfd)
+2026-03-24T13:55:53.8292211Z Download action repository 'aws-actions/configure-aws-credentials@v5' (SHA:61815dcd50bd041e203e49132bacad1fd04d2708)
+2026-03-24T13:55:54.0815251Z Download action repository 'actions/setup-python@v6' (SHA:a309ff8b426b58ec0e2a45f0f869d46889d02405)
+2026-03-24T13:55:54.1623774Z Download action repository 'hashicorp/setup-terraform@v4' (SHA:5e8dbf3c6d9deaf4193ca7a8fb23f2ac83bb6c85)
+2026-03-24T13:55:54.3660768Z Download action repository 'actions/setup-node@v5' (SHA:a0853c24544627f65ddf259abe73b1d18a591444)
+2026-03-24T13:55:54.6627945Z Complete job name: Deploy to dev
+2026-03-24T13:55:54.7449813Z ##[group]Run actions/checkout@v5
+2026-03-24T13:55:54.7451116Z with:
+2026-03-24T13:55:54.7451902Z   repository: chertt007/digital-twin
+2026-03-24T13:55:54.7453181Z   token: ***
+2026-03-24T13:55:54.7453944Z   ssh-strict: true
+2026-03-24T13:55:54.7454910Z   ssh-user: git
+2026-03-24T13:55:54.7455724Z   persist-credentials: true
+2026-03-24T13:55:54.7456636Z   clean: true
+2026-03-24T13:55:54.7457448Z   sparse-checkout-cone-mode: true
+2026-03-24T13:55:54.7458448Z   fetch-depth: 1
+2026-03-24T13:55:54.7459250Z   fetch-tags: false
+2026-03-24T13:55:54.7460063Z   show-progress: true
+2026-03-24T13:55:54.7460891Z   lfs: false
+2026-03-24T13:55:54.7461641Z   submodules: false
+2026-03-24T13:55:54.7462457Z   set-safe-directory: true
+2026-03-24T13:55:54.7463607Z env:
+2026-03-24T13:55:54.7464718Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:55:54.7465697Z ##[endgroup]
+2026-03-24T13:55:54.8438589Z Syncing repository: chertt007/digital-twin
+2026-03-24T13:55:54.8441329Z ##[group]Getting Git version info
+2026-03-24T13:55:54.8442831Z Working directory is '/home/runner/work/digital-twin/digital-twin'
+2026-03-24T13:55:54.8445145Z [command]/usr/bin/git version
+2026-03-24T13:55:54.8497267Z git version 2.53.0
+2026-03-24T13:55:54.8519059Z ##[endgroup]
+2026-03-24T13:55:54.8533766Z Temporarily overriding HOME='/home/runner/work/_temp/fc7a4915-e3f4-45c7-9bd5-fbe416f4c8d1' before making global git config changes
+2026-03-24T13:55:54.8537624Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-24T13:55:54.8541405Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/digital-twin/digital-twin
+2026-03-24T13:55:54.8581120Z Deleting the contents of '/home/runner/work/digital-twin/digital-twin'
+2026-03-24T13:55:54.8585647Z ##[group]Initializing the repository
+2026-03-24T13:55:54.8590004Z [command]/usr/bin/git init /home/runner/work/digital-twin/digital-twin
+2026-03-24T13:55:54.8705501Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-24T13:55:54.8709264Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-24T13:55:54.8712771Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-24T13:55:54.8716078Z hint: call:
+2026-03-24T13:55:54.8716982Z hint:
+2026-03-24T13:55:54.8718026Z hint: 	git config --global init.defaultBranch <name>
+2026-03-24T13:55:54.8719760Z hint:
+2026-03-24T13:55:54.8721105Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-24T13:55:54.8722900Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-24T13:55:54.8724295Z hint:
+2026-03-24T13:55:54.8725315Z hint: 	git branch -m <name>
+2026-03-24T13:55:54.8726189Z hint:
+2026-03-24T13:55:54.8727589Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-24T13:55:54.8729653Z Initialized empty Git repository in /home/runner/work/digital-twin/digital-twin/.git/
+2026-03-24T13:55:54.8732788Z [command]/usr/bin/git remote add origin https://github.com/chertt007/digital-twin
+2026-03-24T13:55:54.8794615Z ##[endgroup]
+2026-03-24T13:55:54.8796242Z ##[group]Disabling automatic garbage collection
+2026-03-24T13:55:54.8798016Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-24T13:55:54.8829554Z ##[endgroup]
+2026-03-24T13:55:54.8830862Z ##[group]Setting up auth
+2026-03-24T13:55:54.8836666Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-24T13:55:54.8869134Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-24T13:55:54.9211202Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-24T13:55:54.9247809Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-24T13:55:54.9483865Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-24T13:55:54.9517189Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-24T13:55:54.9753969Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-24T13:55:54.9791001Z ##[endgroup]
+2026-03-24T13:55:54.9792412Z ##[group]Fetching the repository
+2026-03-24T13:55:54.9800342Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +742e8a3dd4dbc0ced78dfe949eef5a62e416ddf5:refs/remotes/origin/main
+2026-03-24T13:55:55.2161131Z From https://github.com/chertt007/digital-twin
+2026-03-24T13:55:55.2164874Z  * [new ref]         742e8a3dd4dbc0ced78dfe949eef5a62e416ddf5 -> origin/main
+2026-03-24T13:55:55.2197938Z ##[endgroup]
+2026-03-24T13:55:55.2200298Z ##[group]Determining the checkout info
+2026-03-24T13:55:55.2203135Z ##[endgroup]
+2026-03-24T13:55:55.2205611Z [command]/usr/bin/git sparse-checkout disable
+2026-03-24T13:55:55.2252971Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-24T13:55:55.2284315Z ##[group]Checking out the ref
+2026-03-24T13:55:55.2288264Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-24T13:55:55.2395214Z Switched to a new branch 'main'
+2026-03-24T13:55:55.2398417Z branch 'main' set up to track 'origin/main'.
+2026-03-24T13:55:55.2406519Z ##[endgroup]
+2026-03-24T13:55:55.2443766Z [command]/usr/bin/git log -1 --format=%H
+2026-03-24T13:55:55.2473071Z 742e8a3dd4dbc0ced78dfe949eef5a62e416ddf5
+2026-03-24T13:55:55.2948722Z ##[group]Run aws-actions/configure-aws-credentials@v5
+2026-03-24T13:55:55.2950096Z with:
+2026-03-24T13:55:55.2951314Z   role-to-assume: ***
+2026-03-24T13:55:55.2952243Z   role-session-name: github-actions-deploy
+2026-03-24T13:55:55.2953295Z   aws-region: ***
+2026-03-24T13:55:55.2954100Z   audience: sts.amazonaws.com
+2026-03-24T13:55:55.2955217Z   output-env-credentials: true
+2026-03-24T13:55:55.2956087Z env:
+2026-03-24T13:55:55.2956822Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:55:55.2957652Z ##[endgroup]
+2026-03-24T13:55:55.5290722Z Assuming role with OIDC
+2026-03-24T13:55:56.0298751Z Authenticated as assumedRoleId AROA4ZD4N4IYV2XMYRD6V:github-actions-deploy
+2026-03-24T13:55:56.1613792Z ##[group]Run aws sts get-caller-identity
+2026-03-24T13:55:56.1614304Z [36;1maws sts get-caller-identity[0m
+2026-03-24T13:55:56.1670479Z shell: /usr/bin/bash -e {0}
+2026-03-24T13:55:56.1670843Z env:
+2026-03-24T13:55:56.1671319Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:55:56.1671688Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:55:56.1672035Z   AWS_REGION: ***
+2026-03-24T13:55:56.1672403Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:55:56.1672877Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:55:56.1679353Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:55:56.1679686Z ##[endgroup]
+2026-03-24T13:56:00.7339256Z {
+2026-03-24T13:56:00.7339930Z     "UserId": "AROA4ZD4N4IYV2XMYRD6V:github-actions-deploy",
+2026-03-24T13:56:00.7341185Z     "Account": "***",
+2026-03-24T13:56:00.7346568Z     "Arn": "arn:aws:sts::***:assumed-role/github-actions-twin-deploy/github-actions-deploy"
+2026-03-24T13:56:00.7347543Z }
+2026-03-24T13:56:00.8328112Z ##[group]Run actions/setup-python@v6
+2026-03-24T13:56:00.8328445Z with:
+2026-03-24T13:56:00.8328660Z   python-version: 3.12
+2026-03-24T13:56:00.8328906Z   check-latest: false
+2026-03-24T13:56:00.8329259Z   token: ***
+2026-03-24T13:56:00.8329488Z   update-environment: true
+2026-03-24T13:56:00.8329752Z   allow-prereleases: false
+2026-03-24T13:56:00.8330001Z   freethreaded: false
+2026-03-24T13:56:00.8330218Z env:
+2026-03-24T13:56:00.8330445Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:00.8330741Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:00.8330992Z   AWS_REGION: ***
+2026-03-24T13:56:00.8331247Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:00.8331588Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:00.8336686Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:00.8336943Z ##[endgroup]
+2026-03-24T13:56:00.9643200Z ##[group]Installed versions
+2026-03-24T13:56:00.9741799Z Successfully set up CPython (3.12.13)
+2026-03-24T13:56:00.9742685Z ##[endgroup]
+2026-03-24T13:56:00.9849838Z ##[group]Run curl -LsSf https://astral.sh/uv/install.sh | sh
+2026-03-24T13:56:00.9850372Z [36;1mcurl -LsSf https://astral.sh/uv/install.sh | sh[0m
+2026-03-24T13:56:00.9850758Z [36;1mecho "$HOME/.local/bin" >> $GITHUB_PATH[0m
+2026-03-24T13:56:01.1467064Z shell: /usr/bin/bash -e {0}
+2026-03-24T13:56:01.1467519Z env:
+2026-03-24T13:56:01.1467998Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:01.1468484Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:01.1468967Z   AWS_REGION: ***
+2026-03-24T13:56:01.1469429Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:01.1470024Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:01.1480071Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:01.1480683Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:01.1481500Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-03-24T13:56:01.1482297Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:01.1483039Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:01.1483731Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:01.1484685Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-03-24T13:56:01.1485290Z ##[endgroup]
+2026-03-24T13:56:01.2930455Z downloading uv 0.11.0 x86_64-unknown-linux-gnu
+2026-03-24T13:56:02.0169662Z installing to /home/runner/.local/bin
+2026-03-24T13:56:02.0242317Z   uv
+2026-03-24T13:56:02.0267076Z   uvx
+2026-03-24T13:56:02.0310588Z everything's installed!
+2026-03-24T13:56:02.0451758Z ##[group]Run hashicorp/setup-terraform@v4
+2026-03-24T13:56:02.0452499Z with:
+2026-03-24T13:56:02.0452830Z   terraform_wrapper: false
+2026-03-24T13:56:02.0453299Z   cli_config_credentials_hostname: app.terraform.io
+2026-03-24T13:56:02.0453830Z   terraform_version: latest
+2026-03-24T13:56:02.0454200Z env:
+2026-03-24T13:56:02.0455295Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:02.0455723Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:02.0456121Z   AWS_REGION: ***
+2026-03-24T13:56:02.0456526Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:02.0456861Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:02.0465535Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:02.0466048Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:02.0466773Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-03-24T13:56:02.0467352Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:02.0467744Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:02.0468629Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:02.0469300Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-03-24T13:56:02.0469842Z ##[endgroup]
+2026-03-24T13:56:02.1889411Z (node:2447) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-03-24T13:56:02.1891299Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-24T13:56:02.4418896Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/009cdcbe-0971-4484-b611-a2cdc5f42925
+2026-03-24T13:56:03.1502682Z ##[group]Run actions/setup-node@v5
+2026-03-24T13:56:03.1502972Z with:
+2026-03-24T13:56:03.1503169Z   node-version: 20
+2026-03-24T13:56:03.1503378Z   cache: npm
+2026-03-24T13:56:03.1503631Z   cache-dependency-path: frontend/package-lock.json
+2026-03-24T13:56:03.1503947Z   always-auth: false
+2026-03-24T13:56:03.1504166Z   check-latest: false
+2026-03-24T13:56:03.1504670Z   token: ***
+2026-03-24T13:56:03.1504889Z   package-manager-cache: true
+2026-03-24T13:56:03.1505135Z env:
+2026-03-24T13:56:03.1505361Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:03.1505608Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:03.1505851Z   AWS_REGION: ***
+2026-03-24T13:56:03.1506081Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:03.1506417Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:03.1511125Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:03.1511431Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.1511862Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-03-24T13:56:03.1512314Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.1512694Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.1513069Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.1513456Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-03-24T13:56:03.1513787Z ##[endgroup]
+2026-03-24T13:56:03.2961999Z Found in cache @ /opt/hostedtoolcache/node/20.20.1/x64
+2026-03-24T13:56:03.2967209Z (node:2460) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-03-24T13:56:03.2968315Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-24T13:56:03.2969919Z ##[group]Environment details
+2026-03-24T13:56:03.6425067Z node: v20.20.1
+2026-03-24T13:56:03.6425869Z npm: 10.8.2
+2026-03-24T13:56:03.6426215Z yarn: 1.22.22
+2026-03-24T13:56:03.6427010Z ##[endgroup]
+2026-03-24T13:56:03.6453253Z [command]/opt/hostedtoolcache/node/20.20.1/x64/bin/npm config get cache
+2026-03-24T13:56:03.7602844Z /home/runner/.npm
+2026-03-24T13:56:03.8730017Z npm cache is not found
+2026-03-24T13:56:03.8859792Z ##[group]Run # Set environment variables for the script
+2026-03-24T13:56:03.8860223Z [36;1m# Set environment variables for the script[0m
+2026-03-24T13:56:03.8860592Z [36;1mexport AWS_ACCOUNT_ID=***[0m
+2026-03-24T13:56:03.8861106Z [36;1mexport DEFAULT_AWS_REGION=***[0m
+2026-03-24T13:56:03.8861387Z [36;1m[0m
+2026-03-24T13:56:03.8861610Z [36;1m# Make script executable and run it[0m
+2026-03-24T13:56:03.8861906Z [36;1mchmod +x scripts/deploy.sh[0m
+2026-03-24T13:56:03.8862176Z [36;1m./scripts/deploy.sh dev[0m
+2026-03-24T13:56:03.8918447Z shell: /usr/bin/bash -e {0}
+2026-03-24T13:56:03.8918713Z env:
+2026-03-24T13:56:03.8918957Z   DEFAULT_AWS_REGION: ***
+2026-03-24T13:56:03.8919236Z   AWS_DEFAULT_REGION: ***
+2026-03-24T13:56:03.8919498Z   AWS_REGION: ***
+2026-03-24T13:56:03.8919751Z   AWS_ACCESS_KEY_ID: ***
+2026-03-24T13:56:03.8920094Z   AWS_SECRET_ACCESS_KEY: ***
+2026-03-24T13:56:03.8925641Z   AWS_SESSION_TOKEN: ***
+2026-03-24T13:56:03.8926023Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.8926475Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-03-24T13:56:03.8926923Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.8927351Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.8927753Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-03-24T13:56:03.8928156Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-03-24T13:56:03.8928634Z   AWS_ROLE_ARN: ***
+2026-03-24T13:56:03.8928848Z ##[endgroup]
+2026-03-24T13:56:03.9035972Z Using GitHub OIDC credentials
+2026-03-24T13:56:03.9036900Z 🚀 Deploying twin to dev...
+2026-03-24T13:56:03.9043673Z 📦 Building Lambda package...
+2026-03-24T13:56:04.4436989Z Using CPython 3.12.13 interpreter at: /opt/hostedtoolcache/Python/3.12.13/x64/bin/python3.12
+2026-03-24T13:56:04.4438376Z Creating virtual environment at: .venv
+2026-03-24T13:56:04.5397642Z Downloading pydantic-core (2.0MiB)
+2026-03-24T13:56:04.5406714Z Downloading openai (1.1MiB)
+2026-03-24T13:56:04.5413157Z Downloading botocore (14.0MiB)
+2026-03-24T13:56:04.6133640Z  Downloaded pydantic-core
+2026-03-24T13:56:04.8377440Z  Downloaded openai
+2026-03-24T13:56:05.0019522Z  Downloaded botocore
+2026-03-24T13:56:05.1032337Z Installed 32 packages in 100ms
+2026-03-24T13:56:05.3265308Z Unable to find image 'public.ecr.aws/lambda/python:3.12' locally
+2026-03-24T13:56:05.5960073Z 3.12: Pulling from lambda/python
+2026-03-24T13:56:05.6429342Z bf639fcde966: Pulling fs layer
+2026-03-24T13:56:05.6430124Z dc6162246921: Pulling fs layer
+2026-03-24T13:56:05.6430838Z 350721d34ec8: Pulling fs layer
+2026-03-24T13:56:05.6431606Z 4e59a93cc0d9: Pulling fs layer
+2026-03-24T13:56:05.6432269Z 85f148e76baa: Pulling fs layer
+2026-03-24T13:56:05.6432924Z b448e16026b2: Pulling fs layer
+2026-03-24T13:56:05.6433510Z 4e59a93cc0d9: Waiting
+2026-03-24T13:56:05.6433913Z 85f148e76baa: Waiting
+2026-03-24T13:56:05.6434238Z b448e16026b2: Waiting
+2026-03-24T13:56:05.7447279Z 350721d34ec8: Verifying Checksum
+2026-03-24T13:56:05.7448623Z 350721d34ec8: Download complete
+2026-03-24T13:56:05.7460553Z dc6162246921: Verifying Checksum
+2026-03-24T13:56:05.7461524Z dc6162246921: Download complete
+2026-03-24T13:56:05.8091698Z 4e59a93cc0d9: Verifying Checksum
+2026-03-24T13:56:05.8092524Z 4e59a93cc0d9: Download complete
+2026-03-24T13:56:05.8544757Z b448e16026b2: Download complete
+2026-03-24T13:56:05.8786687Z bf639fcde966: Verifying Checksum
+2026-03-24T13:56:05.8787440Z bf639fcde966: Download complete
+2026-03-24T13:56:06.2987293Z 85f148e76baa: Verifying Checksum
+2026-03-24T13:56:06.2988413Z 85f148e76baa: Download complete
+2026-03-24T13:56:07.4010302Z bf639fcde966: Pull complete
+2026-03-24T13:56:08.4472402Z dc6162246921: Pull complete
+2026-03-24T13:56:08.4582350Z 350721d34ec8: Pull complete
+2026-03-24T13:56:08.5203944Z 4e59a93cc0d9: Pull complete
+2026-03-24T13:56:14.0290519Z 85f148e76baa: Pull complete
+2026-03-24T13:56:14.0409570Z b448e16026b2: Pull complete
+2026-03-24T13:56:14.0455407Z Digest: sha256:655d3d70a185e87e2b86f61bde3609165b198cd7bcf64191ca77743db61c6378
+2026-03-24T13:56:14.0469952Z Status: Downloaded newer image for public.ecr.aws/lambda/python:3.12
+2026-03-24T13:56:14.5831349Z Collecting fastapi (from -r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:14.6072652Z   Downloading fastapi-0.135.2-py3-none-any.whl.metadata (28 kB)
+2026-03-24T13:56:14.6338368Z Collecting uvicorn (from -r /var/task/requirements.txt (line 2))
+2026-03-24T13:56:14.6373813Z   Downloading uvicorn-0.42.0-py3-none-any.whl.metadata (6.7 kB)
+2026-03-24T13:56:14.6532923Z Collecting python-dotenv (from -r /var/task/requirements.txt (line 3))
+2026-03-24T13:56:14.6565216Z   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+2026-03-24T13:56:14.6694953Z Collecting python-multipart (from -r /var/task/requirements.txt (line 4))
+2026-03-24T13:56:14.6728482Z   Downloading python_multipart-0.0.22-py3-none-any.whl.metadata (1.8 kB)
+2026-03-24T13:56:14.8756432Z Collecting boto3 (from -r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:14.8791351Z   Downloading boto3-1.42.74-py3-none-any.whl.metadata (6.7 kB)
+2026-03-24T13:56:14.8976875Z Collecting pypdf (from -r /var/task/requirements.txt (line 6))
+2026-03-24T13:56:14.9011491Z   Downloading pypdf-6.9.2-py3-none-any.whl.metadata (7.1 kB)
+2026-03-24T13:56:14.9156631Z Collecting mangum (from -r /var/task/requirements.txt (line 7))
+2026-03-24T13:56:14.9190070Z   Downloading mangum-0.21.0-py3-none-any.whl.metadata (3.5 kB)
+2026-03-24T13:56:14.9398107Z Collecting starlette>=0.46.0 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:14.9429758Z   Downloading starlette-1.0.0-py3-none-any.whl.metadata (6.3 kB)
+2026-03-24T13:56:15.0298670Z Collecting pydantic>=2.9.0 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.0333477Z   Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+2026-03-24T13:56:15.0527720Z Collecting typing-extensions>=4.8.0 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.0563264Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-24T13:56:15.0664158Z Collecting typing-inspection>=0.4.2 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.0696654Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-03-24T13:56:15.0798533Z Collecting annotated-doc>=0.0.2 (from fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.0830894Z   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+2026-03-24T13:56:15.0995261Z Collecting click>=7.0 (from uvicorn->-r /var/task/requirements.txt (line 2))
+2026-03-24T13:56:15.1032837Z   Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-03-24T13:56:15.1141048Z Collecting h11>=0.8 (from uvicorn->-r /var/task/requirements.txt (line 2))
+2026-03-24T13:56:15.1174827Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-03-24T13:56:15.3532109Z Collecting botocore<1.43.0,>=1.42.74 (from boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.3566966Z   Downloading botocore-1.42.74-py3-none-any.whl.metadata (5.9 kB)
+2026-03-24T13:56:15.3691735Z Collecting jmespath<2.0.0,>=0.7.1 (from boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.3726117Z   Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+2026-03-24T13:56:15.3884549Z Collecting s3transfer<0.17.0,>=0.16.0 (from boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.3915988Z   Downloading s3transfer-0.16.0-py3-none-any.whl.metadata (1.7 kB)
+2026-03-24T13:56:15.4076360Z Collecting python-dateutil<3.0.0,>=2.1 (from botocore<1.43.0,>=1.42.74->boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.4107558Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-03-24T13:56:15.4324894Z Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.43.0,>=1.42.74->boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:15.4358224Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-03-24T13:56:15.4496732Z Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.4527465Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-03-24T13:56:15.9454564Z Collecting pydantic-core==2.41.5 (from pydantic>=2.9.0->fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:15.9495569Z   Downloading pydantic_core-2.41.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+2026-03-24T13:56:16.0741642Z Collecting anyio<5,>=3.6.2 (from starlette>=0.46.0->fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:16.0774978Z   Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+2026-03-24T13:56:16.0965281Z Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette>=0.46.0->fastapi->-r /var/task/requirements.txt (line 1))
+2026-03-24T13:56:16.0999933Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-03-24T13:56:16.1149461Z Collecting six>=1.5 (from python-dateutil<3.0.0,>=2.1->botocore<1.43.0,>=1.42.74->boto3->-r /var/task/requirements.txt (line 5))
+2026-03-24T13:56:16.1183103Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-03-24T13:56:16.1285923Z Downloading fastapi-0.135.2-py3-none-any.whl (117 kB)
+2026-03-24T13:56:16.1344060Z Downloading uvicorn-0.42.0-py3-none-any.whl (68 kB)
+2026-03-24T13:56:16.1398452Z Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-03-24T13:56:16.1452734Z Downloading python_multipart-0.0.22-py3-none-any.whl (24 kB)
+2026-03-24T13:56:16.1504928Z Downloading boto3-1.42.74-py3-none-any.whl (140 kB)
+2026-03-24T13:56:16.1559456Z Downloading pypdf-6.9.2-py3-none-any.whl (333 kB)
+2026-03-24T13:56:16.1705843Z Downloading mangum-0.21.0-py3-none-any.whl (17 kB)
+2026-03-24T13:56:16.1756483Z Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+2026-03-24T13:56:16.1809943Z Downloading botocore-1.42.74-py3-none-any.whl (14.7 MB)
+2026-03-24T13:56:16.2403254Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 257.4 MB/s eta 0:00:00
+2026-03-24T13:56:16.2442346Z Downloading click-8.3.1-py3-none-any.whl (108 kB)
+2026-03-24T13:56:16.2498139Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-03-24T13:56:16.2550995Z Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+2026-03-24T13:56:16.2600618Z Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+2026-03-24T13:56:16.2671237Z Downloading pydantic_core-2.41.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-03-24T13:56:16.2793028Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 196.5 MB/s eta 0:00:00
+2026-03-24T13:56:16.2825159Z Downloading s3transfer-0.16.0-py3-none-any.whl (86 kB)
+2026-03-24T13:56:16.2879440Z Downloading starlette-1.0.0-py3-none-any.whl (72 kB)
+2026-03-24T13:56:16.2933383Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-03-24T13:56:16.2986760Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-03-24T13:56:16.3041187Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-03-24T13:56:16.3092063Z Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+2026-03-24T13:56:16.3150025Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-03-24T13:56:16.3210037Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-03-24T13:56:16.3265220Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+2026-03-24T13:56:16.3318910Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-03-24T13:56:16.4178198Z Installing collected packages: urllib3, typing-extensions, six, python-multipart, python-dotenv, pypdf, jmespath, idna, h11, click, annotated-types, annotated-doc, uvicorn, typing-inspection, python-dateutil, pydantic-core, mangum, anyio, starlette, pydantic, botocore, s3transfer, fastapi, boto3
+2026-03-24T13:56:18.2350447Z Successfully installed annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.13.0 boto3-1.42.74 botocore-1.42.74 click-8.3.1 fastapi-0.135.2 h11-0.16.0 idna-3.11 jmespath-1.1.0 mangum-0.21.0 pydantic-2.12.5 pydantic-core-2.41.5 pypdf-6.9.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.22 s3transfer-0.16.0 six-1.17.0 starlette-1.0.0 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.6.3 uvicorn-0.42.0
+2026-03-24T13:56:18.8903342Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-03-24T13:56:18.9510863Z 
+2026-03-24T13:56:18.9511670Z [notice] A new release of pip is available: 25.0.1 -> 26.0.1
+2026-03-24T13:56:18.9512520Z [notice] To update, run: pip install --upgrade pip
+2026-03-24T13:56:20.7179063Z Creating Lambda deployment package...
+2026-03-24T13:56:20.7179735Z Installing dependencies for Lambda runtime...
+2026-03-24T13:56:20.7180298Z Copying application files...
+2026-03-24T13:56:20.7180710Z Creating zip file...
+2026-03-24T13:56:20.7181213Z Created lambda-deployment.zip (21.99 MB)
+2026-03-24T13:56:21.9174598Z [0m[1mInitializing the backend...[0m
+2026-03-24T13:56:23.1245596Z [0m[32m
+2026-03-24T13:56:23.1246739Z Successfully configured the backend "s3"! Terraform will automatically
+2026-03-24T13:56:23.1248154Z use this backend unless the backend configuration changes.[0m
+2026-03-24T13:56:23.7783835Z [0m[1mInitializing provider plugins...[0m
+2026-03-24T13:56:23.7784868Z - Finding hashicorp/aws versions matching "~> 6.0"...
+2026-03-24T13:56:23.9101434Z - Installing hashicorp/aws v6.37.0...
+2026-03-24T13:56:28.4832199Z - Installed hashicorp/aws v6.37.0 (signed by HashiCorp)
+2026-03-24T13:56:28.4834782Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+2026-03-24T13:56:28.4835772Z selections it made above. Include this file in your version control repository
+2026-03-24T13:56:28.4836558Z so that Terraform can guarantee to make the same selections by default when
+2026-03-24T13:56:28.4837264Z you run "terraform init" in the future.[0m
+2026-03-24T13:56:28.4837521Z 
+2026-03-24T13:56:28.4837931Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2026-03-24T13:56:28.4838419Z [0m[32m
+2026-03-24T13:56:28.4838952Z You may now begin working with Terraform. Try running "terraform plan" to see
+2026-03-24T13:56:28.4839726Z any changes that are required for your infrastructure. All Terraform commands
+2026-03-24T13:56:28.4840235Z should now work.
+2026-03-24T13:56:28.4840398Z 
+2026-03-24T13:56:28.4840754Z If you ever set or change modules or backend configuration for Terraform,
+2026-03-24T13:56:28.4841392Z rerun this command to reinitialize your working directory. If you forget, other
+2026-03-24T13:56:28.4842027Z commands will detect it and remind you to do so if necessary.[0m
+2026-03-24T13:56:31.8098966Z [0m[32mSwitched to workspace "dev".[0m
+2026-03-24T13:56:31.8123238Z 🎯 Applying Terraform...
+2026-03-24T13:56:33.7689987Z Acquiring state lock. This may take a few moments...
+2026-03-24T13:56:38.5821170Z 
+2026-03-24T13:56:38.5821804Z Changes to Outputs:
+2026-03-24T13:56:38.5822746Z   [32m+[0m[0m custom_domain_url = ""
+2026-03-24T13:56:38.5823107Z 
+2026-03-24T13:56:38.5823758Z You can apply this plan to save these new output values to the Terraform
+2026-03-24T13:56:38.5824959Z state, without changing any real infrastructure.
+2026-03-24T13:56:38.5826210Z [31m╷[0m[0m
+2026-03-24T13:56:38.5827456Z [31m│[0m [0m[1m[31mError: [0m[0m[1mfailed to get shared config profile, root[0m
+2026-03-24T13:56:38.5828323Z [31m│[0m [0m
+2026-03-24T13:56:38.5829245Z [31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/aws"],
+2026-03-24T13:56:38.5830549Z [31m│[0m [0m  on versions.tf line 12, in provider "aws":
+2026-03-24T13:56:38.5831506Z [31m│[0m [0m  12: provider "aws" [4m{[0m[0m
+2026-03-24T13:56:38.5831966Z [31m│[0m [0m
+2026-03-24T13:56:38.5832299Z [31m╵[0m[0m
+2026-03-24T13:56:38.5832853Z [31m╷[0m[0m
+2026-03-24T13:56:38.5834054Z [31m│[0m [0m[1m[31mError: [0m[0m[1mfailed to get shared config profile, root[0m
+2026-03-24T13:56:38.5835022Z [31m│[0m [0m
+2026-03-24T13:56:38.5835748Z [31m│[0m [0m[0m  with provider["registry.terraform.io/hashicorp/aws"].us_east_1,
+2026-03-24T13:56:38.5836775Z [31m│[0m [0m  on versions.tf line 16, in provider "aws":
+2026-03-24T13:56:38.5837405Z [31m│[0m [0m  16: provider "aws" [4m{[0m[0m
+2026-03-24T13:56:38.5837838Z [31m│[0m [0m
+2026-03-24T13:56:38.5838140Z [31m╵[0m[0m
+2026-03-24T13:56:38.8181392Z ##[error]Process completed with exit code 1.
+2026-03-24T13:56:38.8287829Z Post job cleanup.
+2026-03-24T13:56:38.9464259Z Post job cleanup.
+2026-03-24T13:56:39.0296116Z [command]/usr/bin/git version
+2026-03-24T13:56:39.0335338Z git version 2.53.0
+2026-03-24T13:56:39.0373815Z Temporarily overriding HOME='/home/runner/work/_temp/ae88b3c9-5104-4c39-830c-45a5bcf535df' before making global git config changes
+2026-03-24T13:56:39.0375808Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-24T13:56:39.0379384Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/digital-twin/digital-twin
+2026-03-24T13:56:39.0417898Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-24T13:56:39.0455357Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-24T13:56:39.0745232Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-24T13:56:39.0773030Z http.https://github.com/.extraheader
+2026-03-24T13:56:39.0784774Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-24T13:56:39.0820132Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-24T13:56:39.1069471Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-24T13:56:39.1103283Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-24T13:56:39.1485904Z Cleaning up orphan processes
+2026-03-24T13:56:39.1777016Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: aws-actions/configure-aws-credentials@v5. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
