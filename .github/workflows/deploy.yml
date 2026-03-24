@@ -26,6 +26,7 @@ jobs:
     environment: ${{ github.event.inputs.environment || 'dev' }}
     env:
       DEFAULT_AWS_REGION: ${{ secrets.DEFAULT_AWS_REGION || 'us-east-1' }}
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
     steps:
       - name: Checkout code
