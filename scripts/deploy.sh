@@ -3,10 +3,16 @@ set -e
 
 ENVIRONMENT=${1:-dev}          # dev | test | prod
 PROJECT_NAME=${2:-twin}
-AWS_PROFILE=root
-export AWS_PROFILE
-export AWS_DEFAULT_PROFILE="$AWS_PROFILE"
-echo "Using AWS profile: ${AWS_PROFILE}"
+if [ -n "${GITHUB_ACTIONS:-}" ]; then
+  # In GitHub Actions we rely on OIDC credentials from configure-aws-credentials.
+  unset AWS_PROFILE AWS_DEFAULT_PROFILE
+  echo "Using GitHub OIDC credentials"
+else
+  AWS_PROFILE=${AWS_PROFILE:-root}
+  export AWS_PROFILE
+  export AWS_DEFAULT_PROFILE="$AWS_PROFILE"
+  echo "Using AWS profile: ${AWS_PROFILE}"
+fi
 
 echo "🚀 Deploying ${PROJECT_NAME} to ${ENVIRONMENT}..."
 

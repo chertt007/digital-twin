@@ -12,13 +12,19 @@ function Assert-LastExitCode([string]$Step) {
 }
 
 Write-Host "Deploying $ProjectName to $Environment ..." -ForegroundColor Green
-if ($AwsProfile -ne "root") {
-    Write-Host "Overriding AWS profile '$AwsProfile' to 'root'." -ForegroundColor Yellow
-    $AwsProfile = "root"
+if ($env:GITHUB_ACTIONS -eq "true") {
+    Write-Host "Using GitHub OIDC credentials" -ForegroundColor Cyan
+    Remove-Item Env:AWS_PROFILE -ErrorAction SilentlyContinue
+    Remove-Item Env:AWS_DEFAULT_PROFILE -ErrorAction SilentlyContinue
 }
-Write-Host "Using AWS profile: $AwsProfile" -ForegroundColor Cyan
-$env:AWS_PROFILE = $AwsProfile
-$env:AWS_DEFAULT_PROFILE = $AwsProfile
+else {
+    if ([string]::IsNullOrWhiteSpace($AwsProfile)) {
+        $AwsProfile = "root"
+    }
+    Write-Host "Using AWS profile: $AwsProfile" -ForegroundColor Cyan
+    $env:AWS_PROFILE = $AwsProfile
+    $env:AWS_DEFAULT_PROFILE = $AwsProfile
+}
 
 # 1. Build Lambda package
 Set-Location (Split-Path $PSScriptRoot -Parent)   # project root
